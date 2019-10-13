@@ -1,0 +1,34 @@
+#include <iostream>
+#include<Empregado.h>
+#include <string>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+using namespace std;
+
+int main()
+{
+    char nome_novato[30], sobrenome_novato[50], nome_gerente[30], sobrenome_gerente[50];
+    float salario_novato, salario_gerente;
+
+    cout << "Digite o nome e o sobrenome do Empregado 1: "<<endl;
+    gets(nome_novato);
+    gets(sobrenome_novato);
+    cout<< "Digite o Salario: "<<endl;
+    cin >>salario_novato;
+
+    cout << "Digite o nome e o sobrenome do Empregado 2: "<<endl;
+    gets(nome_gerente);
+    gets(nome_gerente);
+    gets(sobrenome_gerente);
+    cout<< "Digite o Salario: "<<endl;
+    cin >>salario_gerente;
+
+
+    Empregado novato = Empregado(nome_novato,sobrenome_novato,salario_novato);
+    Empregado gerente = Empregado(nome_gerente,sobrenome_gerente,salario_gerente);
+    system("cls");
+    cout<<"Empregado 1:"<<"\nSalario Anual :"<<novato.salarioAnual()<<"\nAumento Anual : "<<novato.aumentaSalario()<<endl;
+    cout<<"Empregado 2:"<<"\nSalario Anual :"<<gerente.salarioAnual()<<"\nAumento Anual : "<<gerente.aumentaSalario()<<endl;
+    return 0;
+}
